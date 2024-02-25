@@ -4,6 +4,8 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import cross from '../img/bi_x-octagon.png';
+import success from '../img/bi_check2-circle.png';
 
 const startBtn = document.querySelector('[data-start]');
 const timerDays = document.querySelector('[data-days]');
@@ -38,7 +40,7 @@ const options = {
         backgroundColor: '#EF4040',
         messageColor: '#ffffff',
         position: 'topRight',
-        iconUrl: '../img/bi_x-octagon.png',
+        iconUrl: cross,
       });
       startBtn.disabled = true;
       if (intervalId) {
@@ -60,10 +62,15 @@ function startTimer() {
 
     if (delta <= 0) {
       clearInterval(intervalId);
-      //   iziToast.success({
-      //     title: 'Success',
-      //     message: 'Countdown finished!',
-      //   });
+      iziToast.success({
+        title: 'Success!',
+        titleColor: '#ffffff',
+        position: 'topRight',
+        message: 'Countdown finished!',
+        backgroundColor: '#59A10D',
+        messageColor: '#ffffff',
+        iconUrl: success,
+      });
       startBtn.disabled = false;
       input.disabled = false;
     } else {

@@ -1,16 +1,3 @@
-.custom-izitoast-class {
-  border-bottom: 2px solid #b5ea7c;
-  border-radius: 4px;
-  padding: 20px;
-  width: 383px;
-  height: 64px;
-  background-color: #000000;
-}
-
-.iziToast.iziToast-success {
-  background-color: #000000;
-}
-
 .form {
   width: 360px;
   /* height: 40px; */

@@ -2,6 +2,8 @@
 
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import success from '../img/bi_check2-circle.png';
+import cross from '../img/bi_x-octagon.png';
 
 const form = document.querySelector('.form');
 
@@ -30,11 +32,7 @@ form.addEventListener('submit', event => {
         backgroundColor: '#59A10D',
         messageColor: '#ffffff',
         position: 'topRight',
-        iconUrl: '../img/bi_check2-circle.png',
-        onOpening: function (instance, toast) {
-          // Додаємо клас до .iziToast після відкриття повідомлення
-          toast.classList.add('custom-izitoast-class');
-        },
+        iconUrl: success,
       });
     })
     .catch(error => {
@@ -44,7 +42,7 @@ form.addEventListener('submit', event => {
         backgroundColor: '#EF4040',
         messageColor: '#ffffff',
         position: 'topRight',
-        iconUrl: '../img/bi_x-octagon.png',
+        iconUrl: cross,
       });
     });
   form.reset();
